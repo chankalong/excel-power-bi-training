@@ -15,6 +15,12 @@ transition: slide-left
 favicon: 'https://bokss.org.hk/content/logo/icon.png'
 mdc: true
 layout: intro
+# author field for exported PDF
+author: Ka Long CHAN
+# keywords field for exported PDF, comma-delimited.
+keywords: excel,powerbi,datascience
+download: true
+selectable: true
 ---
 
 # Introduction to Excel and Power BI

@@ -10,4 +10,5 @@ Edit the [slides.md](./slides.md) to see the changes.
 
 Learn more about Slidev on [documentations](https://sli.dev/).
 
-hihi
+# Introduction to Excel and Power BI
+by Ka Long CHAN from BOKSS for IMHS (Internal training use only)
