@@ -15,5 +15,8 @@
     "slidev-theme-eloc": "^1.0.2",
     "slidev-theme-geist": "^0.8.1",
     "vue": "^3.4.26"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.43.1"
   }
 }
