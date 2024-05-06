@@ -19,7 +19,7 @@ layout: intro
 author: Ka Long CHAN
 # keywords field for exported PDF, comma-delimited.
 keywords: excel,powerbi,datascience
-download: true
+download: '/slides-export.pdf'
 selectable: true
 colorSchema: light
 ---
