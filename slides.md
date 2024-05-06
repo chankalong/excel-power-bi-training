@@ -19,7 +19,7 @@ layout: intro
 author: Ka Long CHAN
 # keywords field for exported PDF, comma-delimited.
 keywords: excel,powerbi,datascience
-#download: '/slides-export.pdf'
+download: 'https://github.com/chankalong/excel-power-bi-training/blob/bbe5b65c1e4537d3fb59236556a4519263ad5904/slides-export.pdf'
 selectable: true
 colorSchema: light
 ---
@@ -168,3 +168,13 @@ layout: two-cols-header
   - R, Python
 
 ![Local Image](/data-science.png)
+
+---
+transition: fade-out
+---
+
+# test download document
+
+“R for Data Science” (Wickham and Grolemund 2017)
+
+[Local Image](/slides-export.pdf)
