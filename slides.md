@@ -21,6 +21,7 @@ author: Ka Long CHAN
 keywords: excel,powerbi,datascience
 download: true
 selectable: true
+colorSchema: light
 ---
 
 # Introduction to Excel and Power BI
