@@ -1,1 +1,0 @@
-import{o,b as t,f as s}from"../modules/vue-p3csHQEQ.js";import{_ as r}from"../index-fY6EWHD-.js";const a={},n={class:"slidev-layout default"};function l(e,c){return o(),t("div",n,[s(e.$slots,"default")])}const _=r(a,[["render",l],["__file","/Users/kalongchan/programmer/excel-power-bi-training/node_modules/@slidev/client/layouts/default.vue"]]);export{_ as I};
