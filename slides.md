@@ -84,11 +84,7 @@ layout: two-cols-header
 
 # Structured vs unstructured data
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -113,12 +109,6 @@ layout: two-cols-header
 
 # Structured vs unstructured data
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
-
 ::left::
 
 ## Structured data
@@ -140,11 +130,7 @@ layout: two-cols-header
 
 # Quantitative vs. qualitative data
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -183,11 +169,7 @@ layout: two-cols-header
 
 # Workflow of Data Science
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -216,11 +198,7 @@ layout: two-cols-header
 
 # Workflow of Data Science
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -250,11 +228,7 @@ layout: two-cols-header
 
 # Workflow of Data Science
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -279,6 +253,45 @@ layout: two-cols-header
 
 ---
 transition: fade-out
+layout: two-cols-header
+---
+
+# Common data cleaning challenges
+
+<style>
+  ul {
+    width: 200%
+  }
+</style>
+
+::left::
+
+- Missing data
+- Inconsistent
+  - units
+  - format
+  - spelling variations
+  - typo
+
+::right::
+
+- Outliers and errors
+- Duplicate
+- Unstructured
+- Wrong data types
+
+---
+transition: fade-out
+---
+
+# 3-R's in data science
+
+<div style="display: flex; justify-content: center;">
+<img src="/3-r-data-science.png" style="width: 75%"/>
+</div>
+
+---
+transition: fade-out
 layout: section
 ---
 
@@ -300,9 +313,6 @@ layout: two-cols-header
 # Edit, Copy and Paste
 
 <style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
   ul {
     width: 200%
   }
@@ -334,11 +344,7 @@ layout: two-cols-header
 
 # Referencing
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 ::left::
 
@@ -421,11 +427,7 @@ layout: two-cols-header
 
 # F4 Hotkey
 
-<style>
-    .two-cols-header {
-    grid-template-rows: repeat(4, 1fr)
-  }
-</style>
+
 
 
 ::left::
@@ -485,12 +487,6 @@ layout: two-cols-header
 
 # Feature of Table in Excel
 
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
-
 ::left::
 
 - Column header row
@@ -547,21 +543,15 @@ layout: two-cols-header
 
 # Type of functions in Excel
 
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
-
 ::left::
 
+- Operations
 - Command button in Ribbon
   - Data validation
   - Conditional formatting
   - Remove duplicates
   - Flash fill
   - Split text to columns
-- Operations
 
 ::right::
 
@@ -579,12 +569,6 @@ layout: two-cols-header
 ---
 
 # Operations
-
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
 
 ::left::
 
@@ -650,12 +634,6 @@ layout: two-cols-header
 
 # Date & Time function
 
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
-
 ::left::
 
 ## Date
@@ -708,7 +686,6 @@ transition: fade-out
 =IF()
 =IFS()
 =IFERROR()
-=SWITCH()
 ```
 
 ---
@@ -717,12 +694,6 @@ layout: two-cols-header
 ---
 
 # Logical + Aggregate function
-
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
 
 ::left::
 
@@ -751,23 +722,6 @@ transition: fade-out
 # Lookup function
 ```ts
 =VLOOKUP()
-=XLOOKUP()
-=FILTER()
-```
-
----
-transition: fade-out
----
-
-# Array function
-## Return more than one cell
-
-```ts
-=FILTER()
-=SORT()
-=SORTBY()
-=UNIQUE()
-=SEQUENCE()
 ```
 
 ---
@@ -777,7 +731,6 @@ transition: fade-out
 # Other useful function
 
 ```ts
-=XMATCH()
 =INDEX()
 =INDIRECT()
 =OFFSET()
@@ -790,19 +743,31 @@ transition: fade-out
 =CHOOSE()
 =SEARCH()
 =FIND()
+=MATCH()
 ```
+
+---
+transition: fade-out
+---
+
+# Other useful function only in Excel 2021 or Excel Web
+
+```ts
+=SORT()
+=SORTBY()
+=UNIQUE()
+=FILTER()
+=XLOOKUP()
+=XMATCH()
+=SWITCH()
+```
+
 ---
 transition: fade-out
 layout: two-cols-header
 ---
 
 # Wildcards in Excel
-
-<style>
-.two-cols-header {
-  grid-template-rows: repeat(4, 1fr)
-}
-</style>
 
 ::left::
 
@@ -821,6 +786,17 @@ Use to match pattern in function
 | ?  | 1 character |
 | *  | 0 or more character |
 | ~  | Escape whilcards |
+
+---
+transition: fade-out
+---
+
+# Use case
+
+- Find the unique value
+- Combine two table (Vlook + Column)
+- Data validation with function
+- Conditional formatting with function
 
 ---
 transition: fade-out
@@ -854,7 +830,7 @@ transition: fade-out
 
 # Big data era
 
-[big-data-etl]
+<div style="display: flex; justify-content: center;"><img src="/etl-process.png" style="width: 80%" /></div>
 
 ---
 transition: fade-out
@@ -879,6 +855,8 @@ transition: fade-out
 - Multiple sheets in Excel with same structure
 - File from Onedrive Business (BOKSS)
 
+![excel-import](/excel-import.png)
+
 ---
 transition: fade-out
 ---
@@ -886,6 +864,8 @@ transition: fade-out
 # Transform
 - Modify current column
 - Add new column
+
+![excel-transform](/excel-transform.png)
 
 ---
 transition: fade-out
@@ -895,6 +875,8 @@ transition: fade-out
 - Load to excel sheet
 - Load to excel connection
 
+![excel-load](/excel-load.png)
+
 ---
 transition: fade-out
 ---
@@ -902,6 +884,8 @@ transition: fade-out
 # Combine query
 - Merge (Join or map)
 - Append
+
+![excel-query-combine](/excel-query-combine.png)
 
 ---
 transition: fade-out
@@ -919,7 +903,7 @@ transition: fade-out
 
 # Full join
 
-<div><img src="/full-outer-join-operation.png" style="width: 50%" /></div>
+<div style="display: flex; justify-content: center;"><img src="/full-outer-join-operation.png" style="width: 50%" /></div>
 
 ---
 transition: fade-out
@@ -927,7 +911,7 @@ transition: fade-out
 
 # Left join (Right join)
 
-<div><img src="/left-outer-join-operation.png" /></div>
+<div style="display: flex; justify-content: center;"><img src="/left-outer-join-operation.png" /></div>
 
 ---
 transition: fade-out
@@ -935,7 +919,7 @@ transition: fade-out
 
 # Inner join
 
-<div><img src="/inner-join-operation.png" /></div>
+<div style="display: flex; justify-content: center;"><img src="/inner-join-operation.png" /></div>
 
 ---
 transition: fade-out
@@ -943,7 +927,7 @@ transition: fade-out
 
 # Anti join
 
-<div><img src="/left-anti-join-operation.png" /></div>
+<div style="display: flex; justify-content: center;"><img src="/left-anti-join-operation.png" /></div>
 
 ---
 transition: fade-out
@@ -951,3 +935,644 @@ layout: statement
 ---
 
 # Make your decision
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 6
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+Power BI Navigation
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Report View
+
+::left::
+
+1. Canvas
+2. Filters Pane
+3. Visualization Pane
+    -  Build visual
+    - Format page
+4. Data Pane
+5. Page Overview
+
+::right::
+
+<img src="/power-bi-report-view.png" style="max-width: 145%;
+    position: relative;
+    right: 10rem;
+    bottom: 2rem;"></img>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Table View
+
+::left::
+
+1. Data Grid
+2. Data Pane
+3. DAX Formula bar
+4. Table Tools
+
+::right::
+
+<img src="/power-bi-table-view.png" style="max-width: 145%;
+    position: relative;
+    right: 10rem;
+    bottom: 2rem;"></img>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Model View
+
+::left::
+
+1. Data Model
+2. Data Pane
+3. Properties Pane
+
+::right::
+
+<img src="/power-bi-model-view.png" style="max-width: 145%;
+    position: relative;
+    right: 10rem;
+    bottom: 2rem;"></img>
+
+---
+transition: fade-out
+---
+
+# DAX Query View
+
+<div style="display: flex; justify-content: center;">
+<img src="/power-bi-dax-view.png" style="max-width: 75%;
+    position: relative;"></img></div>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Power Query Editor
+
+::left::
+
+1. Query Editor Ribbon
+2. Queries Pane
+3. Query Setting
+4. Status Bar
+5. Table Pane
+
+::right::
+
+<img src="/power-bi-power-query.png" style="max-width: 145%;
+    position: relative;
+    right: 10rem;
+    bottom: 2rem;"></img>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Drilling Down
+
+::left::
+
+1. Date
+    - Auto create Date Table
+    - Mark as Date Table
+    - Using DAX
+    - Using Power Query (M)
+2. Custom Hierarchies
+    - Department -> Unit -> Team
+
+::right::
+
+<img src="/power-bi-drilling-down.png" style="max-width: 125%;
+    position: relative;
+    right: 4rem;"></img>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Filter
+
+::left::
+
+1. Visual Level
+2. Page Level
+3. Report Level
+4. Slicer
+5. Interactions
+
+::right::
+
+<img src="/power-bi-interaction-edit.png" style="max-width: 150%;
+    position: relative;
+    right: 12rem;
+    bottom: 2rem"></img>
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Sorting
+
+::left::
+
+1. Sort in Table View
+2. sort in Visual
+3. Sort by column
+
+::right::
+
+<img src="/power-bi-sort-by-column.png" style="max-width: 120%;
+    position: relative;
+    right: 8rem;
+    bottom: 4rem"></img>
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 7
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+DAX in Power BI
+
+---
+transition: fade-out
+---
+
+# What is DAX
+- **D**ata **A**nalysis e**X**pressions
+- Based on Excel formulas and functions
+- Create calculated columns, measures, tables
+- DAX reference
+  - [https://docs.microsoft.com/en-us/dax/dax-function-reference](https://docs.microsoft.com/en-us/dax/dax-function-reference)
+
+---
+transition: fade-out
+---
+
+# Calculated columns
+- Calculate at row level
+- Add new column to existing table
+- Based on Excel formulas and functions
+- Calculate when data is refreshed
+```dax
+new_column = Sales[Price] + Sales[Tax]
+```
+
+---
+transition: fade-out
+---
+
+# Calculated measures
+- Aggregates multiple rows
+- Add a new field for visualization
+- Calculated when you interact with the visuals
+- Two ways
+    - from scratch
+    - use Quick Measure
+
+---
+transition: fade-out
+---
+
+# Context of DAX
+
+<div style="margin-left: 1.5rem"><img style="width: 70%" src="/power-query-context.png" /></div>
+
+[reference](https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-calculations-options)
+
+---
+transition: fade-out
+---
+
+# Row Context
+
+- Use current row (all row)
+- Custom column (M language)
+- Calculated columns
+```dax
+Sales[Price] * Sales[Tax]
+```
+
+
+
+---
+transition: fade-out
+---
+
+# Filter Context
+
+- Filter before calculation is carried out
+- Calculated measures
+    - Aggregates on the calculated columns
+
+```dax
+SUM(Sales[Profit])
+
+SUMX(<table>, <expression>)
+SUMX(Sales, Sales[Price] * Sales[Tax])
+SUMX(FILTER(Sales, Sales[Region]="EMEA"), Sales[Price] * Sales[Tax])
+
+CALCULATE(<expression>, <filter1>, ...other filter conditions)
+CALCULATE(SUM(Sales), Sales[Region]="EMEA")
+```
+
+---
+transition: fade-out
+---
+
+# VAR and RETURN
+
+- Useful for complax calculation
+
+```dax
+Sales YoY Growth % =
+DIVIDE(
+    ([Sales] - CALCULATE([Sales], PARALLELPERIOD('Date'[Date], -12, MONTH))),
+    CALCULATE([Sales], PARALLELPERIOD('Date'[Date], -12, MONTH))
+)
+```
+
+```dax
+Sales YoY Growth % =
+VAR SalesPriorYear =
+    CALCULATE([Sales], PARALLELPERIOD('Date'[Date], -12, MONTH))
+RETURN
+    DIVIDE(([Sales] - SalesPriorYear), SalesPriorYear)
+```
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 8
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+M language in Power BI
+
+---
+transition: fade-out
+---
+
+# What is M language
+
+- programme language use in Power Query
+- all action in Power Query will be convert to M language
+- You can write M language manually in
+  - Custom Column
+  - Formula bar
+  - Advanced Editor
+- M language reference
+  - [https://learn.microsoft.com/en-us/powerquery-m/](https://learn.microsoft.com/en-us/powerquery-m/)
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 9
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+Power Query in Power BI
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Data preview
+
+::left::
+
+- Quick analyze the data in power query
+- Helps diagnose errors and inconsistencies
+- Helps you decide what transformation(s) to use
+
+::right::
+
+<div><img src="/power-bi-data-preview.png" style="max-width: 120%;
+    position: relative;
+    right: 4rem;
+    top: 3rem"></div>
+
+---
+transition: fade-out
+---
+
+# Data Transform
+- Pivot column : reshape data for report
+- unpivot column: reshape data for data analysis
+- Transpose: swap column and row name
+- Group by
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 10
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+Data Model in Power BI
+
+---
+transition: fade-out
+---
+
+# What is data model
+
+- Tables
+- Columns
+- Data types
+- Relationship between tables
+- Keys
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Star Schema
+
+::left::
+
+- Facts table: metrics
+    - Facts (measures)
+    - Keys: use to build relationship between tables
+- Dimensions table: context
+- Benefit
+  - Reduce file size
+  - Reduce redundant data
+  - Easy to manage
+
+::right::
+
+```mermaid
+flowchart TD
+    A["Person
+    (Dimension table)"] --- F["Mental Health Status
+    (Fact table)"]
+    B["Date
+    (Dimension table)"] --- F
+    F --- C["Case Worker
+    (Dimension table)"]
+    F --- D["Centre
+    (Dimension table)"]
+    style F fill:#bbf,stroke:#333,stroke-width:4px
+```
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Fact table
+
+::left::
+
+- Make up of 
+    - Facts (measures)
+    - Keys: use to build relationship between tables
+- Fact tables are long and narrow
+    - Lots of rows
+    - Fewer columns
+
+::right::
+
+| id | centre_id | depression_scure
+|---|---|---|
+| 1 | 1 | 10 |
+| 2 | 1 | 15 |
+| 3 | 2 | 12 |
+| 4 | 2 | 19 |
+| 5 | 3 | 20 |
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Dimension table
+
+::left::
+
+- Provide context
+- Shared concepts
+- Contain static data
+- Dimension tables are short and wide
+    - Few of rows
+    - Lots of columns
+
+::right::
+
+| centre_id | name_centre | district_centre |
+|---|---|---|
+| 1 | ICCMW (Kwai Tsing) | KT |
+| 2 | ICCMW (Wan Chai) | WC |
+| 3 | ICCMW (Eastern) | HKE |
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Snowflake Schema
+
+::left::
+
+- Allows relationships between dimensions
+- Fact table(s) remain the same
+- Benefit
+  - Reduce file size
+  - Reduce redundant data
+  - Easy to manage
+
+::right::
+
+```mermaid {scale: 0.9}
+flowchart TD
+    A["Person
+    (Dimension table)"] --- F["Mental Health Status
+    (Fact table)"]
+    B["Date
+    (Dimension table)"] --- F
+    F --- C["Case Worker
+    (Dimension table)"]
+    F --- D["Centre
+    (Dimension table)"]
+    G["Family Member
+    (Dimension table)"] --- A
+    style F fill:#bbf,stroke:#333,stroke-width:4px
+```
+
+---
+transition: fade-out
+layout: two-cols-header
+---
+
+# Build data model in Power BI
+
+::left::
+
+- Power BI will define relationship automatically
+- You can also define relationship between tables in Model View
+  - One-to-many relationship
+  - Many-to-many relationship
+  - One-to-one relationship
+- Each pair of table can have more than one relationship
+
+::right::
+
+![power-bi-relationship](/power-bi-relationship.png)
+
+---
+transition: fade-out
+---
+
+# Build data model in Power BI
+
+- If more than one relationships
+  - Set the active relationship in Model View
+  - using DAX to activate the relationship when calculating a measure
+
+```dax
+= CALCULATE(SUM(InternetSales[SalesAmount]), USERELATIONSHIP(InternetSales[ShippingDate], DateTime[Date]))
+```
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 11
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+Advanced use case in Power BI
+
+---
+transition: fade-out
+---
+
+# Advanced use case in Power BI
+
+- Button and action
+- Mobile View
+- Publish
+- Drill-through and tooltip
+- Bookmark
+
+---
+transition: fade-out
+---
+
+# Button and action
+
+- Create a App-like experience
+- Add action to buttons
+- Actions
+  - Nagative between pages
+  - Filter
+  - Bookmark
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 12
+
+<style>
+    h1, p {
+    margin-left: 0rem;
+  }
+</style>
+
+Integration with Other Microsoft Product
+
+---
+transition: fade-out
+---
+
+# Integration
+- Microsoft Power Automate
+- Microsoft Forms
+- Microsoft Fabric
+- Microsoft Power App (Less use in our case)
+
+---
+transition: fade-out
+---
+
+# Microsoft Forms + Power Automate
+
+1. Collect data using Forms
+1. Data of Microsoft Forms -> Excel (Power Automate)
+2. Add workflow to the Forms
+    - Send email
+    - Make approval
+    - Add new column
+    - Conditional control
+
+---
+transition: fade-out
+---
+
+# Microsoft Fabric
+1. Excel data -> Lakehouse (Dataflow)
+2. Power BI or Notebook
+3. Create Scorecard / Alert
+4. Trigger another workflow using Power Automate
