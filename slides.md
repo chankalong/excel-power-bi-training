@@ -292,6 +292,18 @@ transition: fade-out
 
 ---
 transition: fade-out
+---
+
+# 1-10-100 rule
+
+<div style="display: flex; justify-content: center;">
+<img src="/1-10-100-rule.png" style="width: 45%"/>
+</div>
+
+[reference](https://www.aunalytics.com/what-is-the-1-10-100-rule-of-data-quality/)
+
+---
+transition: fade-out
 layout: section
 ---
 
@@ -410,11 +422,13 @@ layout: two-cols
 - Custom format
 - Using formula
 
-```ts
+```dax
 =TEXT(A2, "[$-404]aaaa")
 ```
 
 [reference-date-format](https://thomasjao.gitbooks.io/excel/content/entry_data.html)
+
+[reference-other-format](https://support.microsoft.com/en-us/office/text-function-20d5ac4d-7b94-49fd-bb38-93d29371225c)
 
 ::right::
 
@@ -467,6 +481,13 @@ layout: two-cols
 
 ---
 transition: fade-out
+layout: statement
+---
+
+# Exercise
+
+---
+transition: fade-out
 layout: section
 ---
 
@@ -510,7 +531,7 @@ transition: fade-out
 ## Structured referencing
 - Automatically updates as data is added
 
-```ts
+```dax
 =[@colName]
 ```
 <br>
@@ -520,6 +541,13 @@ transition: fade-out
 - Build-in filtering and sorting
 - Data validation automatically updates
 - Re-size table to add or remove data
+
+---
+transition: fade-out
+layout: statement
+---
+
+# Exercise
 
 ---
 transition: fade-out
@@ -934,7 +962,7 @@ transition: fade-out
 layout: statement
 ---
 
-# Make your decision
+# Exercise
 
 ---
 transition: fade-out
@@ -1308,6 +1336,13 @@ transition: fade-out
 - unpivot column: reshape data for data analysis
 - Transpose: swap column and row name
 - Group by
+
+---
+transition: fade-out
+layout: statement
+---
+
+# Exercise
 
 ---
 transition: fade-out
