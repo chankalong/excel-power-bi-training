@@ -52,3 +52,8 @@
     margin-left: 1rem;
   }
 }
+.slidev-layout.section {
+  h1, p {
+    margin-left: 0rem;
+  }
+}

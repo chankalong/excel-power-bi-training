@@ -52,12 +52,6 @@ layout: section
 
 # Chapter 1
 
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
-
 Basic Concept of Data Science
 
 ---
@@ -309,12 +303,6 @@ layout: section
 
 # Chapter 2
 
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
-
 Some Basic Tricks of Excel
 
 ---
@@ -493,12 +481,6 @@ layout: section
 
 # Chapter 3
 
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
-
 Using Table in Excel
 
 ---
@@ -556,12 +538,6 @@ layout: section
 
 # Chapter 4
 
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
-
 Basic Functions in Excel
 
 ---
@@ -573,13 +549,13 @@ layout: two-cols-header
 
 ::left::
 
-- Operations
 - Command button in Ribbon
   - Data validation
   - Conditional formatting
   - Remove duplicates
   - Flash fill
   - Split text to columns
+- Operations
 
 ::right::
 
@@ -624,7 +600,11 @@ transition: fade-out
 ---
 
 # Aggregate function
-```ts
+```dax
+//Syntax
+=SUM(cell1,[cell2],...)
+
+//Example
 =SUM(A2:A10)
 =AVERAGE(A2:A10)
 =MAX(A2:A10)
@@ -638,21 +618,51 @@ transition: fade-out
 ---
 
 # Text function
-```ts
-=LEFT()
-=RIGHT()
-=TRIM()
-=CLEAN()
-=CONCAT()
-=CONCATENATE()
-=TEXTJOIN()
-=TEXTSPLIT()
-=UPPER()
-=LOWER()
-=PROPER()
-=LEN()
-=REPLACE()
-=SUBSTITUTE()
+```dax
+//Syntax
+=LEFT(cell1, [number_character])
+
+//Example
+=LEFT("chankalong", 4) //Extract part of the string start from left
+=RIGHT("chankalong", 4) //Extract part of the string start from right
+
+//Syntax
+=TRIM(cell1)
+
+//Example
+=TRIM() //Remove leading or padding space
+=CLEAN() //Remove non-printed character
+=UPPER() //CONVERT THE TEXT TO UPPERCASE
+=LOWER() //convert the text to lowercase
+=PROPER() //Convert The Text To Proper Case
+=LEN() //Get the length of the text
+```
+
+---
+transition: fade-out
+---
+
+# Text function
+```dax
+//Syntax
+=CONCAT(cell1, [cell2], ....)
+=CONCAT("chankalong", "@", "bokss.org.hk") //=CONCATENATE() combine multiple cells into one cell
+
+//Syntax and Example
+=TEXTJOIN(delimiter, ignore_emphy_cell, cell1, [cell2], ....)
+=TEXTJOIN(".", TRUE, "bokss", "org", "hk") //combine multiple cells into one cell
+
+//Syntax and Example
+=TEXTSPLIT(cell1, delimiter)
+=TEXTSPLIT("chankalong@bokss.org.hk", "@") //split one cell into multiple cells
+
+//Syntax and Example
+=SUBSTITUTE(cell, old_text, new_text)
+=SUBSTITUTE("chankalong", "long", "") //change specific character with another character
+
+//Syntax and Example
+=REPLACE(cell, start_num, num_character, new_text)
+=REPLACE("chankalong", 7, 4, "") //change characters in a specified position of a text string
 ```
 
 ---
@@ -665,26 +675,47 @@ layout: two-cols-header
 ::left::
 
 ## Date
-```ts
-=DATE()
-=YEAR()
-=MONTH()
-=DAY()
-=DAYS()
-=TODAY()
-=WEEKDAY()
-=WEEKNUM()
+```dax
+//Syntax and Example
+=DATE(year, month, day)
+=DATE(2024, 5, 30) //create date
+
+//Syntax
+=YEAR(date)
+
+//Example
+=YEAR("2024-05-30")
+=MONTH("2024-05-30")
+=DAY("2024-05-30")
+=WEEKDAY("2024-05-30")
+=WEEKNUM("2024-05-30")
+
+//Syntax and Example
+=DAYS(end_date, start_date)
+=DAYS("2024-05-30", "2024-05-20")
 ```
 
 ::right::
 
 ## Time
-```ts
-=TIME()
-=NOW()
-=HOUR()
-=MINUTE()
-=SECOND()
+```dax
+//Syntax and Example
+=TIME(hour, minutes, second)
+=TIME(10, 25, 0) //create time
+
+//Syntax
+=HOUR(time)
+
+//Example
+=HOUR("10:25 am")
+=MINUTE("10:25 am")
+=SECOND("10:25 am")
+```
+
+## Current
+```dax
+=NOW() //get the current datetime
+=TODAY() //get the current date
 ```
 
 ---
@@ -692,10 +723,21 @@ transition: fade-out
 ---
 
 # Maths function
-```ts
-=ROUND()
-=ABS()
-=INT()
+```dax
+//Syntax
+=ROUND(cell, number_digits)
+
+//Example
+=ROUND(10.5, 0)
+=ROUNDUP(10.5, 0)
+=ROUNDDOWN(10.5, 0)
+
+//Syntax
+=ABS(cell)
+
+//Example
+=ABS(-10) //get the absolute value
+=INT(-10.5) //get the integer (round down)
 ```
 
 ---
@@ -703,17 +745,41 @@ transition: fade-out
 ---
 
 # Logical function
-```ts
-=AND()
-=OR()
-=NOT()
-=ISNUMBER()
-=ISERROR()
-=ISERR()
-=ISBLANK()
-=IF()
-=IFS()
-=IFERROR()
+```dax
+//Syntax
+=ISNUMBER(cell)
+
+//Example
+=ISNUMBER(100) //return TRUE if it is number
+=ISERROR(100) //return TRUE if it is error
+=ISERR(100) //return TRUE if it is error
+=ISBLANK(100) //return TRUE if it is blank
+
+//Syntax
+=AND(logical1, [logical2], ...)
+
+//Example
+=AND("chankalong" = "chankalong", 1 = 1) //return TRUE if all logical value is TRUE
+=OR("chankalong" <> "bokss", 1 > 2) //return TRUE if one of the logical value is TRUE
+
+//Syntax and Example
+=NOT(logical1)
+=NOT(ISNUMBER(100)) //reverse logical value
+```
+
+---
+transition: fade-out
+---
+
+# Logical function
+```dax
+//Syntax and Example
+=IF(logical, value_if_true, value_if_false)
+=IF("chankalong" = "chankalong", "same people", "different people")
+
+//Syntax and Example
+=IFS(logical1, value_if_true1, [logical2], [value_if_true2], ...)
+=IFS(A2 > 150, "A", A2 > 130, "B", A2 > 110, "C", TRUE, "D")
 ```
 
 ---
@@ -726,20 +792,35 @@ layout: two-cols-header
 ::left::
 
 ## \[Aggregate]\[Logical]()
-```ts
-=COUNTIF()
-=COUNTIFS()
-=SUMIF()
-=SUMIFS()
-=AVERAGEIF()
-=AVERAGEIFS()
+```dax
+//Syntax
+=SUMIF(logical_range, logical_criteria, [calculation_range])
+
+//Example
+=SUMIF(A1:A5, "=a", B1:B5)
+=AVERAGEIF(A1:A5, "=a", B1:B5)
+//if calculation_range is empty, 
+//calculation would be based on logical_range 
+
+//Syntax
+=SUMIFS(calculation_range1, logical_range1, logical_criteria1, 
+[logical_range2, logical_criteria2], ...)
+
+//Example
+=SUMIFS(A1:A5, B1:B5, "=a", C1:C5, "=c")
+=AVERAGEIFS(A1:A5, B1:B5, "= a", C1:C5, "= c")
 ```
 
 ::right::
 
 ## D\[Aggregate]()
-```ts
-=DMAX()
+```dax
+//Syntax
+=DMAX(cell_range, calculation_column, 
+criteria_table)
+
+//Example
+=DMAX(A1:E5, "value", E1:E2)
 =DMIN()
 ```
 
@@ -748,8 +829,14 @@ transition: fade-out
 ---
 
 # Lookup function
-```ts
-=VLOOKUP()
+```dax
+//Syntax
+=VLOOKUP(loop_up_value, look_up_table, column_index)
+
+//Example
+=VLOOKUP(A1, E1:G10, 2)
+//loop_up_value should be located in the first column of look_up_table
+=HLOOKUP()
 ```
 
 ---
@@ -758,20 +845,53 @@ transition: fade-out
 
 # Other useful function
 
-```ts
-=INDEX()
-=INDIRECT()
-=OFFSET()
-=LARGE()
-=SMALL()
-=ROW()
-=ROWS()
-=COLUMN()
-=COLUMNS()
-=CHOOSE()
-=SEARCH()
-=FIND()
-=MATCH()
+```dax
+//Syntax
+=SEARCH(find_text, search_text)
+
+//Example
+=SEARCH("a", "chankalong") //case-insensitive and can use wildcard, return the position
+=SEARCH("a?o", "chankalong") //case-insensitive and can use wildcard, return the position
+=FIND("a", "chankalong") //case-sensitive and can use wildcard, return the position
+
+//Syntax and Example
+=INDIRECT(reference_text)
+=INDIRECT("A1") //get the value in A1
+
+//Syntax and Example
+=INDEX(range, row_number)
+=INDEX(A1:A5, 2) //get the value of second row in the A1:A5
+=MATCH(lookup_value, look_up_table)
+=MATCH("e", A1:A5) //get the location of "e" in the A1:A5
+```
+
+---
+transition: fade-out
+---
+
+# Other useful function
+
+```dax
+//Syntax and Example
+=ROW() //get the row number
+=COLUMN() //get the column number
+=ADDRESS(row_number, column_number)
+=ADDRESS(2, 3) //return "$C$2$"
+=OFFSET(reference_cell, row_offset_number, column_offset_number)
+=OFFSET(A1, 2, 3) //get the value offset from A1
+
+//Syntax and Example
+=LARGE(range, nth)
+=LARGE(A1:A10, 3) //get the nth largest value in a range
+=SMALL(range, nth)
+=SMALL(A1:A10, 2) //get the nth smallest value in a range
+
+//Syntax
+=ROWS(range)
+
+//Example
+=ROWS(A1:A20) //get number of rows in the range
+=COLUMNS(A1:P1) //get number of columns in the range
 ```
 
 ---
@@ -780,7 +900,7 @@ transition: fade-out
 
 # Other useful function only in Excel 2021 or Excel Web
 
-```ts
+```dax
 =SORT()
 =SORTBY()
 =UNIQUE()
@@ -819,17 +939,6 @@ Use to match pattern in function
 transition: fade-out
 ---
 
-# Use case
-
-- Find the unique value
-- Combine two table (Vlook + Column)
-- Data validation with function
-- Conditional formatting with function
-
----
-transition: fade-out
----
-
 # Pivot Tables
 
 ## Benefit
@@ -839,16 +948,28 @@ transition: fade-out
 
 ---
 transition: fade-out
+---
+
+# Use case
+- Collapse groups
+- Combine two table (Vlook + Column)
+- Data validation with function
+- Conditional formatting with function
+- Alternative to XLOOKUP in Excel 2016
+
+---
+transition: fade-out
+layout: statement
+---
+
+# Exercise
+
+---
+transition: fade-out
 layout: section
 ---
 
 # Chapter 5
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 Power Query in Excel
 
@@ -880,7 +1001,7 @@ transition: fade-out
 
 - Single file
 - Multiple files with same structure
-- Multiple sheets in Excel with same structure
+- Multiple sheets in Excel with same structure (= Excel.CurrentWorkbook())
 - File from Onedrive Business (BOKSS)
 
 ![excel-import](/excel-import.png)
@@ -970,12 +1091,6 @@ layout: section
 ---
 
 # Chapter 6
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 Power BI Navigation
 
@@ -1143,16 +1258,28 @@ layout: two-cols-header
 
 ---
 transition: fade-out
+layout: statement
+---
+
+# Visual and Format
+
+---
+transition: fade-out
+---
+
+# Exercise
+
+1. Create a date table
+2. Create date hierarchy 
+3. Add a visual and drill-down of date hierarchy
+4. what is the average profit on 2015 Quarter 1 for Packet Package? (Answer with 2 decimal digits)
+
+---
+transition: fade-out
 layout: section
 ---
 
 # Chapter 7
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 DAX in Power BI
 
@@ -1264,16 +1391,20 @@ RETURN
 
 ---
 transition: fade-out
+---
+
+# Exercise
+
+1. Create three filter calculated measure of total amount among "Actual", "Forecast", "Budget"
+2. create the calculated measure of actual / budget
+3. what is the percentage of actual / budget for Expense account type in cell phone?
+
+---
+transition: fade-out
 layout: section
 ---
 
 # Chapter 8
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 M language in Power BI
 
@@ -1298,12 +1429,6 @@ layout: section
 ---
 
 # Chapter 9
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 Power Query in Power BI
 
@@ -1350,12 +1475,6 @@ layout: section
 ---
 
 # Chapter 10
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 Data Model in Power BI
 
@@ -1513,6 +1632,18 @@ layout: two-cols-header
 transition: fade-out
 ---
 
+# Create star schema or snowflake schema
+
+- Modify the source file (not recommend)
+- Use M language in Power Query
+1. import file
+2. use advanced editor to use "\[]" to include all code
+3. reference to the original query
+
+---
+transition: fade-out
+---
+
 # Build data model in Power BI
 
 - If more than one relationships
@@ -1530,12 +1661,6 @@ layout: section
 
 # Chapter 11
 
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
-
 Advanced use case in Power BI
 
 ---
@@ -1545,10 +1670,12 @@ transition: fade-out
 # Advanced use case in Power BI
 
 - Button and action
-- Mobile View
-- Publish
-- Drill-through and tooltip
 - Bookmark
+- Publish
+- Mobile View
+- Drill-through 
+- Customize tooltip
+
 
 ---
 transition: fade-out
@@ -1565,16 +1692,52 @@ transition: fade-out
 
 ---
 transition: fade-out
+---
+
+# Publish
+
+- Publish to Power BI Service
+- Data model will also be published
+- If data source connect to Onedrive, report would be update automatically
+
+<br>
+
+# Mobile View
+- Make a mobile layout for mobile user
+
+---
+transition: fade-out
+---
+
+# Drill-through 
+
+- Go to another page and apply filter automatically
+
+1. create a new page
+2. add a new visual
+3. add a filter into drill-through fields
+4. turn on the cross-report under drill through
+5. go to the original page and right click a plot in visual
+6. select drill-through
+
+---
+transition: fade-out
+---
+
+# Tooltip
+
+- Allow to customize the mouseover information
+
+1. create a new page
+2. change the page to tooltip
+3. change the tooltip of a visual to the newly create page
+
+---
+transition: fade-out
 layout: section
 ---
 
 # Chapter 12
-
-<style>
-    h1, p {
-    margin-left: 0rem;
-  }
-</style>
 
 Integration with Other Microsoft Product
 
@@ -1611,3 +1774,70 @@ transition: fade-out
 2. Power BI or Notebook
 3. Create Scorecard / Alert
 4. Trigger another workflow using Power Automate
+
+---
+transition: fade-out
+layout: section
+---
+
+# Chapter 13
+
+Advance Usage for Form
+
+---
+transition: fade-out
+---
+
+# Form platform
+
+- Google Form (Google Form add-on formfacade)
+- SurveyJS (Case library)
+- MS Form (Less powerful)
+
+---
+transition: fade-out
+---
+
+# Pre-fill
+
+- Google Form
+- MS Form
+- Formfacade: can hide the pre-fill question
+
+<br>
+
+# Regular expression
+
+- Google Form
+- SurveyJS (Case library)
+
+---
+transition: fade-out
+---
+
+# Regular expression
+
+| symbol | rule | example | result |
+|---|---|---|---|
+| . | single character | b.y | boy / buy
+| ? | zero or one of character | bo?y | boy / by |
+| * | zero or more of character | bo*y | booy / boy / by |
+| + | one or more of character | bo+y | booy / boy |
+| ^ | start of the string | bo+y | booy / boy |
+| $ | end of the string | bo+y | booy / boy |
+
+---
+transition: fade-out
+---
+
+# Regular expression
+
+| symbol | rule | example | result |
+|---|---|---|---|
+| \[a-zA-Z] | character in the range: a-z or A-Z | b\[a-zA-Z]y | boy / buy
+| \[0-9] | Any digits  | b\[0-9]y | boy / by |
+| \| | or  | b\[o\|u]y | buy / boy |
+| \\ | match symbol literally | \\.com | .com |
+| \{} | repeat how many times | \[0-9]\{8} | 37515493 |
+
+[online testing](https://regex101.com)
