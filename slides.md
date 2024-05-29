@@ -429,9 +429,6 @@ layout: two-cols-header
 
 # F4 Hotkey
 
-
-
-
 ::left::
 
 - Make previous action
@@ -1474,6 +1471,7 @@ transition: fade-out
 # Exercise
 
 1. import and clean dataset
+2. What is the average value of Southern? 
 
 
 ---
