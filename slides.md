@@ -47,6 +47,20 @@ BOKSS IMHS Internal Training
 
 ---
 transition: fade-out
+---
+
+# Self-introduction
+- Power BI Data Analyst Associate
+- Google Analytics Certification
+- Data Scientist and Data Analyst with R in DataCamp
+- [Re:Fresh Dashboard](http://chankalong.github.io) (password: refresh)
+- [Research Profile](https://orcid.org/0000-0001-5199-2212)
+- [Front-end Website Example](https://refresh.bokss.org.hk/assessment)
+
+
+
+---
+transition: fade-out
 layout: section
 ---
 
@@ -77,8 +91,6 @@ layout: two-cols-header
 ---
 
 # Structured vs unstructured data
-
-
 
 ::left::
 
@@ -124,8 +136,6 @@ layout: two-cols-header
 
 # Quantitative vs. qualitative data
 
-
-
 ::left::
 
 ## Quantitative data
@@ -163,8 +173,6 @@ layout: two-cols-header
 
 # Workflow of Data Science
 
-
-
 ::left::
 
 ## Import
@@ -191,8 +199,6 @@ layout: two-cols-header
 ---
 
 # Workflow of Data Science
-
-
 
 ::left::
 
@@ -222,8 +228,6 @@ layout: two-cols-header
 
 # Workflow of Data Science
 
-
-
 ::left::
 
 ## Modeling
@@ -232,7 +236,6 @@ layout: two-cols-header
 - Out-of-scope
   - Predictive (Machine Learning)
   - Interference (Statistic)
-
 
 ::right::
 
@@ -343,8 +346,6 @@ layout: two-cols-header
 ---
 
 # Referencing
-
-
 
 ::left::
 
@@ -1902,3 +1903,14 @@ layout: section
 <img style="max-width: 35%;" src="/evaluation_qr_code.png"/>
 <a href="https://forms.office.com/r/4JayBxA2aD">MS Form</a>
 </div>
+
+---
+transition: fade-out
+---
+
+# Future Study
+
+- [Microsoft Certified: Power BI Data Analyst Associate](https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/?practice-assessment-type=certification)
+- Google Analytics and Google Tag Manager (For online service)
+- Using Fabric Notebook (R / Python)
+- Power Platform (Power App / Power Automate / Power Page)
