@@ -1080,10 +1080,15 @@ transition: fade-out
 
 ---
 transition: fade-out
-layout: statement
 ---
 
 # Exercise
+
+1. Append the Meeting calendar for 2016-2019 and 2020-2023
+2. Clean the date and time column
+3. remove the missing row for district column
+4. Merge the Ambulance with calendar (filter Ambulance only)
+5. how many emphy row in the Count column?
 
 ---
 transition: fade-out
@@ -1464,10 +1469,12 @@ transition: fade-out
 
 ---
 transition: fade-out
-layout: statement
 ---
 
 # Exercise
+
+1. import and clean dataset
+
 
 ---
 transition: fade-out
@@ -1656,6 +1663,22 @@ transition: fade-out
 
 ---
 transition: fade-out
+---
+
+# Final Exercise
+
+1. create dimension table from the code manual
+2. create a Power BI report
+  - one visual of single variables and one visual including two variables
+  - one calculated measure
+  - a slicer for filter
+  - create conditional formatting for one visual
+  - do not use the default theme
+  - make a mobile view
+3. publish the Power BI and share your Power BI link
+
+---
+transition: fade-out
 layout: section
 ---
 
@@ -1669,13 +1692,29 @@ transition: fade-out
 
 # Advanced use case in Power BI
 
-- Button and action
 - Bookmark
+- Selection
+- Button and action
 - Publish
 - Mobile View
 - Drill-through 
 - Customize tooltip
 
+---
+transition: fade-out
+---
+
+# Bookmark
+
+- save the filter you had applied
+
+<br>
+
+# Selection
+
+- manage the visibility of visual
+- manage the order of visual
+- can combine with Bookmark
 
 ---
 transition: fade-out
@@ -1841,3 +1880,27 @@ transition: fade-out
 | \{} | repeat how many times | \[0-9]\{8} | 37515493 |
 
 [online testing](https://regex101.com)
+
+---
+transition: fade-out
+---
+
+# Exercise
+
+- Use google form to create
+1. email
+2. mobile (8 digits with "+852")
+3. HKID (e.g.: A123)
+4. 12-hour time (e.g.: 10:30 AM)
+
+---
+transition: fade-out
+layout: section
+---
+
+# Evaluation Form
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+<img style="max-width: 35%;" src="/evaluation_qr_code.png"/>
+<a href="https://forms.office.com/r/4JayBxA2aD">MS Form</a>
+</div>
