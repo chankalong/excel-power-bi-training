@@ -1226,8 +1226,13 @@ layout: two-cols-header
     - Mark as Date Table
     - Using DAX
     - Using Power Query (M)
+    ```powerquery
+    =List.Dates(#date(2020, 1, 1), 365*7, #duration(1, 0, 0, 0))
+    ```
 2. Custom Hierarchies
     - Department -> Unit -> Team
+
+
 
 ::right::
 
