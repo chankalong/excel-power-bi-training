@@ -644,11 +644,11 @@ transition: fade-out
 ```dax
 //Syntax
 =CONCAT(cell1, [cell2], ....)
-=CONCAT("chankalong", "@", "bokss.org.hk") //=CONCATENATE() combine multiple cells into one cell
+=CONCATENATE("chankalong", "@", "bokss.org.hk") //=CONCAT() combine multiple cells, only on excel 2021
 
 //Syntax and Example
 =TEXTJOIN(delimiter, ignore_emphy_cell, cell1, [cell2], ....)
-=TEXTJOIN(".", TRUE, "bokss", "org", "hk") //combine multiple cells into one cell
+=TEXTJOIN(".", TRUE, "bokss", "org", "hk") //combine multiple cells, only on excel 2021
 
 //Syntax and Example
 =TEXTSPLIT(cell1, delimiter)
@@ -950,10 +950,20 @@ transition: fade-out
 
 # Use case
 - Collapse groups
-- Combine two table (Vlook + Column)
+- Combine two table (Vlook() + Column())
 - Data validation with function
 - Conditional formatting with function
-- Alternative to XLOOKUP in Excel 2016
+
+<br>
+
+- some example
+```dax
+=ISNUMBER(SEARCH("gmail.com", A1)) //check whether the cell have "gmail.com"
+=AND(LEN(A2) = 8, ISNUMBER(A2)) //check is it a phone number (e.g.: 37515493)
+=LEFT(A3, SEARCH("-", A3)-1) //extract the text before "-"
+=INDIRECT("Table1[gender]") //use in data validation to get the list in the gender column
+=VLOOKUP(A2, $A$2:$F$100, COLUMN()-1, FALSE)
+```
 
 ---
 transition: fade-out
@@ -1003,6 +1013,14 @@ transition: fade-out
 - File from Onedrive Business (BOKSS)
 
 ![excel-import](/excel-import.png)
+
+---
+transition: fade-out
+---
+
+# Multiple sheets in one Excel
+
+<SlidevVideo controls style="width: 80%"><source src="/combine_multiple_sheet.mp4"></SlidevVideo>
 
 ---
 transition: fade-out
@@ -1365,7 +1383,7 @@ SUMX(Sales, Sales[Price] * Sales[Tax])
 SUMX(FILTER(Sales, Sales[Region]="EMEA"), Sales[Price] * Sales[Tax])
 
 CALCULATE(<expression>, <filter1>, ...other filter conditions)
-CALCULATE(SUM(Sales), Sales[Region]="EMEA")
+CALCULATE(SUM(Sales[Price]), Sales[Region]="EMEA")
 ```
 
 ---
@@ -1464,6 +1482,14 @@ transition: fade-out
 - unpivot column: reshape data for data analysis
 - Transpose: swap column and row name
 - Group by
+
+---
+transition: fade-out
+---
+
+# Unpivot and Pivot Column
+
+<SlidevVideo controls style="width: 80%"><source src="/unpivot_pivot_column.mp4"></SlidevVideo>
 
 ---
 transition: fade-out
